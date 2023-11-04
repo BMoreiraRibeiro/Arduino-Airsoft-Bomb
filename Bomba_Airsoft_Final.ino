@@ -8,17 +8,17 @@ int Mcount = 0;      // count minutes
 int Hcount = 0;      // count hours
 int DefuseTimer = 0; // set timer to 0
 
-int Hours = 00;
-int Minutes = 00;
-int Seconds = 00;
+int Hours = 0;
+int Minutes = 0;
+int Seconds = 0;
 int keycount = 0;
 
-int hourstenscode;
-int hoursonescode;
-int mintenscode;
-int minonescode;
-int sectenscode;
-int seconescode;
+int hourstenscode=0;
+int hoursonescode=0;
+int mintenscode=0;
+int minonescode=0;
+int sectenscode=0;
+int seconescode=0;
 
 long secMillis = 0;   // store last time for second add
 long interval = 1000; // interval for seconds
@@ -160,7 +160,7 @@ void modobomba()
     if (Hcount < 10)
     {
       lcd.setCursor(7, 1);
-      lcd.write("0");
+      lcd.print("0");
       lcd.setCursor(8, 1);
       lcd.print(hoursonescode);
     }
@@ -174,7 +174,7 @@ void modobomba()
     if (Mcount < 10)
     {
       lcd.setCursor(10, 1);
-      lcd.write("0");
+      lcd.print("0");
       lcd.setCursor(11, 1);
       lcd.print(minonescode);
     }
@@ -189,7 +189,7 @@ void modobomba()
     if (Scount < 10)
     {
       lcd.setCursor(13, 1);
-      lcd.write("0");
+      lcd.print("0");
       lcd.setCursor(14, 1);
       lcd.print(seconescode);
     }
@@ -411,7 +411,7 @@ void timer()
   if (Hcount < 10) 
     {
       lcd.setCursor (7,1);
-      lcd.write ("0");
+      lcd.print ("0");
       lcd.setCursor (8,1);
       lcd.print (Hcount);
     }
@@ -426,7 +426,7 @@ void timer()
   if (Mcount < 10) 
     {
       lcd.setCursor (10,1);
-      lcd.write ("0");
+      lcd.print ("0");
       lcd.setCursor (11,1);
       lcd.print (Mcount);
     }
@@ -441,7 +441,7 @@ void timer()
   if (Scount < 10) 
     {
       lcd.setCursor (13,1);
-      lcd.write ("0");
+      lcd.print ("0");
       lcd.setCursor (14,1);
       lcd.print (Scount);
     }
