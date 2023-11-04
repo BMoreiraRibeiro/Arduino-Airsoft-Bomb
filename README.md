@@ -1,4 +1,4 @@
-# Arduino-Airsoft-Bomb
+# Arduino Airsoft Bomb
 An Arduino Nano Airsoft Bomb with Domination and Bomb mode.
 
 Im using:
