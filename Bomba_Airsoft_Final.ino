@@ -420,10 +420,10 @@ void modobomba() {
           lcd.print("Bomb Defused");
           tone(buzzer, 4000, 200);
           digitalWrite(ledverde, HIGH);
-          delay(500);
+          delay(200);
           tone(buzzer, 4000, 200);
           digitalWrite(ledverde, HIGH);
-          delay(500);
+          delay(200);
           tone(buzzer, 4000, 200);
           digitalWrite(ledverde, HIGH);
           currentLength = 0;
@@ -501,6 +501,11 @@ void modobomba() {
 }
 
 ISR(TIMER1_COMPA_vect) {
+            tone(13,4000,100);
+          digitalWrite(ledamarelo, HIGH);// sets the LED on
+          delay(10); // waits for a second
+          digitalWrite(ledamarelo, LOW); // sets the LED off
+          delay(10); // waits for a second
   if (Scount > 0) {
     Scount--;  // Diminui os segundos se for maior que zero
   } else {
